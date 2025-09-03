@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hemerson Barbosa - Desenvolvedor WordPress & Angular</title>
+    <meta name="description" content="Desenvolvedor especializado em WordPress e Angular. Criação de sites profissionais e aplicações web modernas.">
+    <meta name="keywords" content="desenvolvedor, wordpress, angular, frontend, sites, portfólio">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h2>HB</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Início</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <button id="themeToggle" class="theme-toggle-btn" aria-label="Alternar tema">
+                    <i class="fas fa-sun light-icon"></i>
+                    <i class="fas fa-moon dark-icon"></i>
+                </button>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Olá, eu sou <span class="highlight">Hemerson Barbosa</span>
+                </h1>
+                <h2 class="hero-subtitle">Desenvolvedor WordPress & Angular</h2>
+                <p class="hero-description">
+                    Especialista em criação de sites profissionais e aplicações web modernas. 
+                    Transformando ideias em experiências digitais excepcionais.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">Ver Portfólio</a>
+                    <a href="#contato" class="btn btn-secondary">Fazer Orçamento</a>
+                    <a href="https://wa.me/556798104089?text=Olá%20Hemerson!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20serviços%20de%20desenvolvimento." target="_blank" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        Falar no WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-animation">
+                    <div class="code-line">const developer = {</div>
+                    <div class="code-line">  name: "Hemerson Barbosa",</div>
+                    <div class="code-line">  skills: ["WordPress", "Angular"],</div>
+                    <div class="code-line">  passion: "Criar soluções digitais"</div>
+                    <div class="code-line">};</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <p>
+                        Sou um desenvolvedor apaixonado por tecnologia e inovação, com foco especial em 
+                        WordPress com elementor e Angular. Minha jornada na programação começou com a curiosidade de 
+                        entender como as coisas funcionam na web.
+                    </p>
+                    <p>
+                        Com experiência em desenvolvimento frontend e criação de sites com WordPress, 
+                        trabalho para entregar soluções que não apenas atendem às necessidades dos clientes, 
+                        mas também superam suas expectativas.
+                    </p>
+                    <p>
+                        Acredito que a tecnologia deve ser acessível e funcional, por isso me dedico a 
+                        criar interfaces intuitivas e experiências de usuário excepcionais.
+                    </p>
+                </div>
+                <div class="sobre-stats">
+                    <div class="stat">
+                        <h3>5+</h3>
+                        <p>Anos de Experiência</p>
+                    </div>
+                    <div class="stat">
+                        <h3>10+</h3>
+                        <p>Projetos Concluídos</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <p>Clientes Satisfeitos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades Section -->
+    <section id="habilidades" class="habilidades">
+        <div class="container">
+            <h2 class="section-title">Minhas Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-wordpress"></i>
+                    </div>
+                    <h3>WordPress</h3>
+                    <p>Desenvolvimento de sites completos com WordPress usando elementor</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-level="90"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-angular"></i>
+                    </div>
+                    <h3>Angular</h3>
+                    <p>Desenvolvimento de aplicações SPA modernas e responsivas com Angular</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-level="85"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML5 & CSS3</h3>
+                    <p>Estruturação semântica e estilização moderna com CSS Grid e Flexbox</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-level="95"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Programação frontend e interatividade para aplicações web</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-level="80"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-git"></i>
+                    </div>
+                    <h3>Git & GitHub</h3>
+                    <p>Controle de versão e colaboração em projetos de desenvolvimento</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-level="85"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsivo</h3>
+                    <p>Design mobile-first e adaptação para todos os dispositivos</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-level="90"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfólio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Meu Portfólio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/fontoura-site.png" alt="Fontoura Advocacia">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="https://fontouraadvocacia.com.br" target="_blank" class="portfolio-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="portfolio-link" onclick="showProjectDetails('fontoura')">
+                                    <i class="fas fa-info-circle"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Fontoura Advocacia</h3>
+                        <p>Site institucional para escritório de advocacia</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Responsivo</span>
+                            <span class="tag">SEO</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/felipe-site.png" alt="Felipe Vendrametto">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="https://felipevendrametto.com.br" target="_blank" class="portfolio-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="portfolio-link" onclick="showProjectDetails('felipe')">
+                                    <i class="fas fa-info-circle"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Felipe Vendrametto</h3>
+                        <p>Site pessoal e portfólio profissional para advogado</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Portfólio</span>
+                            <span class="tag">Blog</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/angular-project.png" alt="Projeto Angular">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link" onclick="showProjectDetails('angular')">
+                                    <i class="fas fa-info-circle"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Aplicação Angular - Gestor Agro</h3>
+                        <p>Sistema de gestão de produtos e serviços para o setor agropecuário</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Angular</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <h2 class="section-title">Meus Serviços</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-wordpress"></i>
+                    </div>
+                    <h3>Desenvolvimento WordPress</h3>
+                    <p>
+                        Criação de sites profissionais usando WordPress com elementor,
+                        plugins específicos e otimização para SEO.
+                    </p>
+                    <ul class="service-features">
+                        <li>Temas personalizados</li>
+                        <li>Plugins específicos</li>
+                        <li>Otimização SEO</li>
+                        <li>Manutenção e suporte</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-angular"></i>
+                    </div>
+                    <h3>Desenvolvimento Angular</h3>
+                    <p>
+                        Desenvolvimento de aplicações web modernas com Angular, criando interfaces 
+                        responsivas e experiências de usuário excepcionais.
+                    </p>
+                    <ul class="service-features">
+                        <li>Aplicações SPA</li>
+                        <li>Componentes reutilizáveis</li>
+                        <li>Integração com APIs</li>
+                        <li>Performance otimizada</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Desenvolvimento Frontend</h3>
+                    <p>
+                        Criação de interfaces modernas e responsivas usando HTML5, CSS3 e JavaScript, 
+                        com foco em experiência do usuário.
+                    </p>
+                    <ul class="service-features">
+                        <li>Design responsivo</li>
+                        <li>Animações CSS</li>
+                        <li>Interatividade JavaScript</li>
+                        <li>Cross-browser</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Manutenção e Suporte</h3>
+                    <p>
+                        Serviços de manutenção contínua, atualizações de segurança e suporte técnico 
+                        para manter seu site funcionando perfeitamente.
+                    </p>
+                    <ul class="service-features">
+                        <li>Atualizações de segurança</li>
+                        <li>Backups regulares</li>
+                        <li>Monitoramento de performance</li>
+                        <li>Suporte técnico</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title">Vamos Conversar?</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Informações de Contato</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hemerson_hgb@icloud.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://www.linkedin.com/in/hemerson-barbosa-079582197/" target="_blank">@hemerson-barbosa</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/556798104089?text=Olá%20Hemerson!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20serviços%20de%20desenvolvimento." target="_blank">+55 (67)9810-4089</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p><a href="https://github.com/KvotheD" target="_blank">@hemersonbarbosa</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Localização</h4>
+                            <p>Campo Grande - MS, Brasil</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome Completo *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Assunto *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensagem *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Tipo de Serviço</label>
+                            <select id="service" name="service">
+                                <option value="">Selecione um serviço</option>
+                                <option value="wordpress">Desenvolvimento WordPress</option>
+                                <option value="angular">Desenvolvimento Angular</option>
+                                <option value="frontend">Desenvolvimento Frontend</option>
+                                <option value="maintenance">Manutenção e Suporte</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensagem
+                        </button>
+                        
+                        <div class="whatsapp-alternative">
+                            <p>Ou prefere falar diretamente?</p>
+                            <a href="https://wa.me/556798104089?text=Olá%20Hemerson!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20serviços%20de%20desenvolvimento." target="_blank" class="btn btn-whatsapp btn-full">
+                                <i class="fab fa-whatsapp"></i>
+                                Falar no WhatsApp
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Hemerson Barbosa</h3>
+                    <p>Desenvolvedor WordPress & Angular</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/hemerson-barbosa-079582197/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/KvotheD" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hemerson Barbosa. Todos os direitos reservados. - CNPJ: 62.505.024/0001-50</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/556798104089?text=Olá%20Hemerson!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20serviços%20de%20desenvolvimento." target="_blank" class="whatsapp-float-btn">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Modal de Detalhes do Projeto -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
