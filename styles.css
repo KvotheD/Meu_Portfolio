@@ -1085,9 +1085,10 @@ section {
      }
      
      .hero {
-         padding-top: 80px; /* Ajuste para mobile pequeno */
+         padding-top: 120px; /* Ajuste para mobile pequeno */
      }
-    
+    }
+  
     /* WhatsApp Float Button Mobile */
     .whatsapp-float {
         bottom: 20px;
@@ -1099,7 +1100,7 @@ section {
         height: 50px;
         font-size: 1.5rem;
     }
-}
+
 
 /* Utilitários */
 .text-center { text-align: center; }
