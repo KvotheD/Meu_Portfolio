@@ -167,6 +167,12 @@ p {
     margin: 0;
 }
 
+.nav-brand-link {
+    text-decoration: none;
+    color: var(--primary-color);
+    margin: 0;
+}
+
 /* Botão Toggle do Tema */
 .theme-toggle {
     margin-right: 1rem;
@@ -342,6 +348,7 @@ p {
     margin-bottom: 2rem;
     max-width: 500px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    text-align: justify;
 }
 
 .hero-buttons {
@@ -448,6 +455,7 @@ section {
 .sobre-text p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
+    text-align: justify;
     color: var(--text-light);
 }
 
@@ -687,6 +695,7 @@ section {
     text-align: center;
     margin-bottom: 1.5rem;
     color: var(--text-light);
+    text-align: justify;
 }
 
 .service-features {
