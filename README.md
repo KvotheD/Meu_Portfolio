@@ -40,10 +40,9 @@ Um site completo onde mostro meus projetos, habilidades e serviços. É tipo um 
 - **Aplicação Angular** - Sistema de gestão agro
 
 ### 🚀 **Serviços**
-- Desenvolvimento WordPress
+- Criação de Sites WordPress
 - Desenvolvimento Angular
 - Frontend geral
-- Manutenção e suporte
 
 ### 📞 **Contato**
 - Formulário funcional (envia email real!)
@@ -105,6 +104,6 @@ Simples: queria um site que fosse bonito, funcional e fácil de manter. Sem comp
 
 ---
 
-**Feito com ❤️ e ☕ por Hemerson Barbosa**
+**Feito por Hemerson Barbosa**
 
 *"Código limpo, design bonito, cliente feliz"*
