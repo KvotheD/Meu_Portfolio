@@ -1,39 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Página Principal -->
     <url>
         <loc>https://hemersonbarbosa.com.br/</loc>
         <lastmod>2025-01-27</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://hemersonbarbosa.com.br/images/logo.png</image:loc>
+            <image:title>Hemerson Barbosa - Desenvolvedor Web</image:title>
+            <image:caption>Logo do desenvolvedor web Hemerson Barbosa</image:caption>
+        </image:image>
     </url>
+    
+    <!-- Seção Sobre -->
     <url>
         <loc>https://hemersonbarbosa.com.br/#sobre</loc>
         <lastmod>2025-01-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    
+    <!-- Seção Habilidades -->
     <url>
         <loc>https://hemersonbarbosa.com.br/#habilidades</loc>
         <lastmod>2025-01-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    
+    <!-- Seção Portfólio -->
     <url>
         <loc>https://hemersonbarbosa.com.br/#portfolio</loc>
         <lastmod>2025-01-27</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://hemersonbarbosa.com.br/images/fontoura-site.png</image:loc>
+            <image:title>Site Fontoura Advocacia</image:title>
+            <image:caption>Projeto de site institucional desenvolvido por Hemerson Barbosa</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://hemersonbarbosa.com.br/images/felipe-site.png</image:loc>
+            <image:title>Site Felipe Vendrametto</image:title>
+            <image:caption>Site pessoal e portfólio profissional desenvolvido por Hemerson Barbosa</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://hemersonbarbosa.com.br/images/angular-project.png</image:loc>
+            <image:title>Aplicação Angular Gestor Agro</image:title>
+            <image:caption>Sistema de gestão agropecuária desenvolvido com Angular</image:caption>
+        </image:image>
     </url>
+    
+    <!-- Seção Serviços -->
     <url>
         <loc>https://hemersonbarbosa.com.br/#servicos</loc>
         <lastmod>2025-01-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
+    
+    <!-- Seção Contato -->
     <url>
         <loc>https://hemersonbarbosa.com.br/#contato</loc>
         <lastmod>2025-01-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    
 </urlset>
