@@ -1,6 +1,4 @@
-// Aguarda o DOM ser carregado
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializa todas as funcionalidades
     initNavigation();
     initScrollEffects();
     initSkillBars();
@@ -10,19 +8,16 @@ document.addEventListener('DOMContentLoaded', function() {
     initThemeToggle();
 });
 
-// Navegação mobile
 function initNavigation() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    // Toggle do menu mobile
     hamburger.addEventListener('click', function() {
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
     });
 
-    // Fecha o menu ao clicar em um link
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             hamburger.classList.remove('active');
@@ -30,7 +25,6 @@ function initNavigation() {
         });
     });
 
-    // Fecha o menu ao clicar fora
     document.addEventListener('click', function(e) {
         if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
             hamburger.classList.remove('active');
@@ -39,13 +33,11 @@ function initNavigation() {
     });
 }
 
-// Efeitos de scroll
 function initScrollEffects() {
     const header = document.querySelector('.header');
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
 
-     // Adiciona funcionalidade à seta de scroll
      const scrollIndicator = document.querySelector('.scroll-indicator');
      if (scrollIndicator) {
          scrollIndicator.addEventListener('click', function() {
@@ -61,8 +53,6 @@ function initScrollEffects() {
             }
         });
     }
-
-    // Header transparente no topo
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
             header.style.background = 'var(--header-bg)';
@@ -73,7 +63,6 @@ function initScrollEffects() {
         }
     });
 
-    // Navegação ativa baseada na seção visível
     window.addEventListener('scroll', function() {
         let current = '';
         sections.forEach(section => {
@@ -92,7 +81,6 @@ function initScrollEffects() {
         });
     });
 
-    // Scroll suave para links internos
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -228,7 +216,7 @@ function showProjectDetails(projectId) {
             ],
             technologies: ['WordPress', 'PHP', 'HTML5', 'CSS3', 'JavaScript', 'Elementor'],
             link: 'https://fontouraadvocacia.com.br',
-            image: 'images/fontoura-site.png'
+            image: 'images/fontoura-site.webp'
         },
         felipe: {
             title: 'Felipe Vendrametto',
@@ -242,7 +230,7 @@ function showProjectDetails(projectId) {
             ],
             technologies: ['WordPress', 'PHP', 'HTML5', 'CSS3', 'JavaScript', 'Elementor'],
             link: 'https://felipevendrametto.com.br',
-            image: 'images/felipe-site.png'
+            image: 'images/felipe-site.webp'
         },
         angular: {
             title: 'Aplicação Angular - Gestor Agro',
@@ -257,7 +245,7 @@ function showProjectDetails(projectId) {
                 'Entre outras'
             ],
             technologies: ['TypeScript', 'Angular', 'API', 'HTML', 'SCSS'],
-            image: 'images/angular-project.png'
+            image: 'images/angular-project.webp'
         }
     };
     
@@ -491,13 +479,22 @@ window.addEventListener('load', function() {
     }
 });
 
-// Adiciona efeito parallax sutil ao hero
-window.addEventListener('scroll', function() {
+// Adiciona efeito parallax sutil ao hero (otimizado com throttling)
+let ticking = false;
+function updateParallax() {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
-    if (hero) {
-        const rate = scrolled * -0.5;
+    if (hero && scrolled < window.innerHeight) {
+        const rate = scrolled * -0.3;
         hero.style.transform = `translateY(${rate}px)`;
+    }
+    ticking = false;
+}
+
+window.addEventListener('scroll', function() {
+    if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
     }
 });
 

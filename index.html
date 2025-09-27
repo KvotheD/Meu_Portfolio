@@ -23,21 +23,282 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Critical CSS - Above the fold styles */
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #7c3aed;
+            --accent-color: #10b981;
+            --text-color: #1e293b;
+            --text-light: #64748b;
+            --background-color: #ffffff;
+            --surface-color: #f8fafc;
+            --border-color: #e2e8f0;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --header-bg: rgba(255, 255, 255, 0.95);
+            --card-bg: #ffffff;
+            --hero-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
+            --footer-bg: #1e293b;
+            --footer-text: #f1f5f9;
+            --code-bg: rgba(255, 255, 255, 0.95);
+            --code-text: #1e293b;
+            --code-border: rgba(255, 255, 255, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--header-bg);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-brand h2 {
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .nav-brand-link {
+            text-decoration: none;
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--hero-bg);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #ffffff, #f0f9ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 2rem;
+            max-width: 500px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            text-align: justify;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* Botões */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px var(--shadow-color);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px var(--shadow-color);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background: linear-gradient(135deg, #128c7e, #075e54);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 215, 102, 0.3);
+        }
+
+        /* Responsividade para mobile */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .hero {
+                padding-top: 70px;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.25rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .nav {
+                padding: 1rem;
+            }
+            
+            .hero-content {
+                padding: 0 1rem;
+            }
+            
+            .hero {
+                padding-top: 120px;
+            }
+        }
+    </style>
     
-    <!-- Font Awesome para ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"></noscript>
+    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hemersonbarbosa.com.br/">
     <meta property="og:title" content="Hemerson Barbosa - Desenvolvedor Web | Criação de Sites Profissionais | Campo Grande-MS">
     <meta property="og:description" content="Desenvolvedor web especializado em criação de sites profissionais com WordPress e Angular. Sites responsivos, aplicações web modernas e desenvolvimento frontend. Atendimento em Campo Grande-MS.">
-    <meta property="og:image" content="https://hemersonbarbosa.com.br/images/logo.png">
+    <meta property="og:image" content="https://hemersonbarbosa.com.br/images/logo.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Hemerson Barbosa - Desenvolvedor Web">
@@ -56,7 +317,7 @@
     <meta property="twitter:url" content="https://hemersonbarbosa.com.br/">
     <meta property="twitter:title" content="Hemerson Barbosa - Desenvolvedor Web | Criação de Sites Profissionais | Campo Grande-MS">
     <meta property="twitter:description" content="Desenvolvedor web especializado em criação de sites profissionais com WordPress e Angular. Sites responsivos, aplicações web modernas e desenvolvimento frontend. Atendimento em Campo Grande-MS.">
-    <meta property="twitter:image" content="https://hemersonbarbosa.com.br/images/logo.png">
+    <meta property="twitter:image" content="https://hemersonbarbosa.com.br/images/logo.webp">
     <meta property="twitter:image:alt" content="Hemerson Barbosa - Desenvolvedor Web">
     <meta property="twitter:creator" content="@hemersonbarbosa">
     <meta property="twitter:site" content="@hemersonbarbosa">
@@ -67,31 +328,38 @@
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
     
-    <!-- Preconnect para performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://wa.me">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
     
-    <!-- DNS Prefetch -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="//wa.me">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
     
-    <!-- Manifest -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="images/logo.webp" as="image">
+    
+    <link rel="prefetch" href="images/fontoura-site.webp">
+    <link rel="prefetch" href="images/felipe-site.webp">
+    <link rel="prefetch" href="images/angular-project.webp">
+    
     <link rel="manifest" href="/manifest.json">
     
-    <!-- Theme Color -->
     <meta name="theme-color" content="#2563eb">
     <meta name="msapplication-TileColor" content="#2563eb">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Hemerson Barbosa">
     
-    <!-- Google Search Console Verification -->
+    <meta http-equiv="X-DNS-Prefetch-Control" content="on">
+    <meta name="format-detection" content="telephone=no">
+    
     <meta name="google-site-verification" content="ObEeBoaVP2Nh8sfSOzmdQwYpesKytGIowNu0wX1YG4I" />
     
-    <!-- Dados Estruturados (JSON-LD) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -101,8 +369,8 @@
         "jobTitle": "Desenvolvedor Web",
         "description": "Desenvolvedor web especializado em criação de sites profissionais com WordPress e Angular. Sites responsivos, aplicações web modernas e desenvolvimento frontend.",
         "url": "https://hemersonbarbosa.com.br",
-        "image": "https://hemersonbarbosa.com.br/images/logo.png",
-        "logo": "https://hemersonbarbosa.com.br/images/logo.png",
+        "image": "https://hemersonbarbosa.com.br/images/logo.webp",
+        "logo": "https://hemersonbarbosa.com.br/images/logo.webp",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Campo Grande",
@@ -228,7 +496,7 @@
         "@type": "Organization",
         "name": "Hemerson Barbosa - Desenvolvedor Web",
         "url": "https://hemersonbarbosa.com.br",
-        "logo": "https://hemersonbarbosa.com.br/images/logo.png",
+        "logo": "https://hemersonbarbosa.com.br/images/logo.webp",
         "description": "Serviços de desenvolvimento web especializados em criação de sites profissionais",
         "address": {
             "@type": "PostalAddress",
@@ -485,7 +753,7 @@
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <img src="images/fontoura-site.png" alt="Site Fontoura Advocacia - Desenvolvido por Hemerson Barbosa - Desenvolvedor Web">
+                        <img src="images/fontoura-site.webp" alt="Site Fontoura Advocacia - Desenvolvido por Hemerson Barbosa - Desenvolvedor Web" loading="lazy" width="350" height="250">
                         <div class="portfolio-overlay">
                             <div class="portfolio-links">
                                 <a href="https://fontouraadvocacia.com.br" target="_blank" class="portfolio-link">
@@ -510,7 +778,7 @@
                 
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <img src="images/felipe-site.png" alt="Site Felipe Vendrametto - Desenvolvido por Hemerson Barbosa - Desenvolvedor Web">
+                        <img src="images/felipe-site.webp" alt="Site Felipe Vendrametto - Desenvolvido por Hemerson Barbosa - Desenvolvedor Web" loading="lazy" width="350" height="250">
                         <div class="portfolio-overlay">
                             <div class="portfolio-links">
                                 <a href="https://felipevendrametto.com.br" target="_blank" class="portfolio-link">
@@ -535,7 +803,7 @@
                 
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <img src="images/angular-project.png" alt="Aplicação Angular Gestor Agro - Desenvolvida por Hemerson Barbosa - Desenvolvedor Web">
+                        <img src="images/angular-project.webp" alt="Aplicação Angular Gestor Agro - Desenvolvida por Hemerson Barbosa - Desenvolvedor Web" loading="lazy" width="350" height="250">
                         <div class="portfolio-overlay">
                             <div class="portfolio-links">
                                 <a href="#" class="portfolio-link" onclick="showProjectDetails('angular')">
@@ -767,10 +1035,21 @@
         </div>
     </div>
 
-    <!-- EmailJS -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+    <script src="script.js" defer></script>
     
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registrado com sucesso:', registration.scope);
+                    })
+                    .catch(function(error) {
+                        console.log('Falha ao registrar ServiceWorker:', error);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>

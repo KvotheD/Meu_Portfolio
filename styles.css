@@ -504,8 +504,13 @@ section {
 }
 
 .skill-card:hover {
-    transform: translateY(-5px);
+    transform: translate3d(0, -5px, 0);
     box-shadow: 0 10px 25px var(--shadow-color);
+}
+
+.skill-card {
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .skill-icon {
@@ -563,8 +568,13 @@ section {
 }
 
 .portfolio-item:hover {
-    transform: translateY(-5px);
+    transform: translate3d(0, -5px, 0);
     box-shadow: 0 10px 25px var(--shadow-color);
+}
+
+.portfolio-item {
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .portfolio-image {
@@ -674,8 +684,13 @@ section {
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
+    transform: translate3d(0, -5px, 0);
     box-shadow: 0 10px 25px var(--shadow-color);
+}
+
+.service-card {
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .service-icon {
@@ -980,15 +995,15 @@ section {
     color: var(--text-color);
 }
 
-/* Animações */
+/* Animações otimizadas */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translate3d(0, 20px, 0);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translate3d(0, 0, 0);
     }
 }
 
